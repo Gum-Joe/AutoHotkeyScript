@@ -1,0 +1,34 @@
+Tue, 27 Nov 2018 19:22:31 GMT express:router:route new '/get/config'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:layer new '/get/config'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:route get '/get/config'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:layer new '/'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:route new '/post/trigger'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:layer new '/post/trigger'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:route post '/post/trigger'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:layer new '/'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:route new '/post/update-keyboard-path'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:layer new '/post/update-keyboard-path'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:route post '/post/update-keyboard-path'
+Tue, 27 Nov 2018 19:22:31 GMT express:router:layer new '/'
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "x-powered-by" to true
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "etag" to 'weak'
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "etag fn" to [Function: generateETag]
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "env" to 'development'
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "query parser" to 'extended'
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "query parser fn" to [Function: parseExtendedQueryString]
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "subdomain offset" to 2
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "trust proxy" to false
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "trust proxy fn" to [Function: trustNone]
+Tue, 27 Nov 2018 19:22:31 GMT express:application booting in development mode
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "view" to [Function: View]
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "views" to 'D:\\Users\\Kishan\\Documents\\Projects\\AutoHotKeyScripts\\views'
+Tue, 27 Nov 2018 19:22:31 GMT express:application set "jsonp callback name" to 'callback'
+Tue, 27 Nov 2018 19:22:33 GMT express:router use '/' query
+Tue, 27 Nov 2018 19:22:33 GMT express:router:layer new '/'
+Tue, 27 Nov 2018 19:22:33 GMT express:router use '/' expressInit
+Tue, 27 Nov 2018 19:22:33 GMT express:router:layer new '/'
+Tue, 27 Nov 2018 19:22:33 GMT express:router use '/' jsonParser
+Tue, 27 Nov 2018 19:22:33 GMT express:router:layer new '/'
+Tue, 27 Nov 2018 19:22:33 GMT express:router use '/api' router
+Tue, 27 Nov 2018 19:22:33 GMT express:router:layer new '/api'
+server info Server now listenning on port 8181

@@ -1,0 +1,3 @@
+; Generates new Pr Project
+#Include .\create_new_project.ahk
+GenerateNewPremiereProject()

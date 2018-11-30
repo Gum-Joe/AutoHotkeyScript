@@ -1,0 +1,27 @@
+name: KeyboardOfMacros
+keyboards:
+  logitech_g810:
+    path: /dev/input/by-id/usb-Logitech_Gaming_Keyboard_G810_166A37573236-event-kbd
+    dir: ./logitech_g810
+    root: index.ahk
+    hotkeys:
+      +$ESC$: TerminatePremiere
+      $ESC$:
+        func: TerminateGCClient
+      Q: DrapCopyEffects
+      W: AutoResize
+      E: GraphicsCenterAlign
+      ^N: GenerateNewPremiereProject
+
+      # Mutli
+      P: TriggerP
+      F1: TriggerF1
+      1: Trigger1
+      A: TriggerF24CA
+addresses:
+  detector: 192.168.0.100
+  server:
+    ipv4: 192.168.0.50
+    port: 8181
+perms:
+  ssh: true

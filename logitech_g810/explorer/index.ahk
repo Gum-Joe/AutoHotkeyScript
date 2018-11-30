@@ -1,0 +1,1 @@
+#Include goto-dirs.ahk

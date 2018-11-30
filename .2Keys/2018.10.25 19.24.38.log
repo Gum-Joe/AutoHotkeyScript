@@ -1,0 +1,337 @@
+Sun, 25 Nov 2018 19:24:41 GMT express:router:route new '/get/config'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/get/config'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:route get '/get/config'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:route new '/post/trigger'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/post/trigger'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:route post '/post/trigger'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:route new '/post/update-keyboard-path'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/post/update-keyboard-path'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:route post '/post/update-keyboard-path'
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/'
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "x-powered-by" to true
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "etag" to 'weak'
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "etag fn" to [Function: generateETag]
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "env" to 'development'
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "query parser" to 'extended'
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "query parser fn" to [Function: parseExtendedQueryString]
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "subdomain offset" to 2
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "trust proxy" to false
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "trust proxy fn" to [Function: trustNone]
+Sun, 25 Nov 2018 19:24:41 GMT express:application booting in development mode
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "view" to [Function: View]
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "views" to 'D:\\Users\\Kishan\\Documents\\Projects\\AutoHotKeyScripts\\views'
+Sun, 25 Nov 2018 19:24:41 GMT express:application set "jsonp callback name" to 'callback'
+Sun, 25 Nov 2018 19:24:41 GMT express:router use '/' query
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/'
+Sun, 25 Nov 2018 19:24:41 GMT express:router use '/' expressInit
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/'
+Sun, 25 Nov 2018 19:24:41 GMT express:router use '/' jsonParser
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/'
+Sun, 25 Nov 2018 19:24:41 GMT express:router use '/api' router
+Sun, 25 Nov 2018 19:24:41 GMT express:router:layer new '/api'
+server info Server now listenning on port 8181
+Sun, 25 Nov 2018 19:43:04 GMT express:router dispatching GET /api/get/config
+Sun, 25 Nov 2018 19:43:04 GMT express:router query  : /api/get/config
+Sun, 25 Nov 2018 19:43:04 GMT express:router expressInit  : /api/get/config
+Sun, 25 Nov 2018 19:43:04 GMT express:router jsonParser  : /api/get/config
+Sun, 25 Nov 2018 19:43:04 GMT body-parser:json skip empty body
+Sun, 25 Nov 2018 19:43:04 GMT express:router trim prefix (/api) from url /api/get/config
+Sun, 25 Nov 2018 19:43:04 GMT express:router router /api : /api/get/config
+api debug Sending a config copy as JSON...
+Sun, 25 Nov 2018 19:43:04 GMT express:router dispatching GET /get/config
+Sun, 25 Nov 2018 19:43:30 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:43:30 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:30 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:30 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:30 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:43:30 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:43:30 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:43:31 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:43:31 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:43:31 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:43:31 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:43:31 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:43:34 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:43:34 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:34 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:34 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:43:34 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:43:34 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:43:34 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:43:34 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:43:34 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:43:34 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:43:34 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:43:34 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:45:10 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:45:10 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:45:10 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:45:10 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:45:10 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:45:10 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:45:10 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:45:10 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:45:10 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:45:10 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:45:10 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:45:10 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:47:21 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:47:21 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:47:21 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:47:21 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:47:21 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:47:21 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:47:21 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:47:21 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:47:21 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:47:21 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:47:21 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:47:21 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:17 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:17 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:17 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:17 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:17 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:17 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:17 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:17 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:17 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:17 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:17 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:17 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:26 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:26 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:26 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:26 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:26 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:26 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:26 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:26 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:26 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:26 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:26 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:26 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:30 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:30 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:30 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:30 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:30 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:30 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:30 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:30 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:30 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:30 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:30 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:30 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:37 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:37 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:37 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:37 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:37 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:37 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:37 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:37 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:37 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:37 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:37 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:37 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:38 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:38 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:38 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:38 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:38 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:38 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:38 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:38 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:38 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:38 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:38 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:38 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:39 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:39 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:39 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:39 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:39 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:39 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:39 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:39 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:39 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:39 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:39 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:39 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:40 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:40 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:40 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:40 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:40 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:40 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:40 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:40 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:40 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:40 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:40 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:40 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:41 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:41 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:41 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:41 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:41 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:41 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:41 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:41 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:41 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:41 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:41 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:41 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:46 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:46 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:46 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:46 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:46 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:46 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:46 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:46 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:46 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:46 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:46 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:46 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:48 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:48 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:48 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:48 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:48 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:48 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:48 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:48 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:48 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:48 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:48 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:48 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:50 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:50 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:48:50 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:48:50 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:48:50 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:48:50 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:49:29 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:49:29 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:49:29 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:49:29 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:49:29 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:49:29 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:49:29 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:49:29 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:49:29 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:49:29 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:49:29 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:49:29 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 19:52:49 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 19:52:49 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 19:52:49 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 19:52:49 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 19:52:49 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 19:52:49 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 19:52:49 GMT body-parser:json read body
+Sun, 25 Nov 2018 19:52:49 GMT body-parser:json parse body
+Sun, 25 Nov 2018 19:52:49 GMT body-parser:json parse json
+Sun, 25 Nov 2018 19:52:49 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 19:52:49 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 19:52:49 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 20:11:28 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 20:11:28 GMT express:router query  : /api/post/trigger
+Sun, 25 Nov 2018 20:11:28 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 20:11:28 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 20:11:28 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 20:11:28 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 20:11:28 GMT body-parser:json read body
+Sun, 25 Nov 2018 20:11:28 GMT body-parser:json parse body
+Sun, 25 Nov 2018 20:11:28 GMT body-parser:json parse json
+Sun, 25 Nov 2018 20:11:28 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 20:11:28 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 20:11:28 GMT express:router dispatching POST /post/trigger
+api debug Got keyboard logitech_g810 and hotkey F1
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerF1()
+Sun, 25 Nov 2018 21:23:14 GMT express:router dispatching POST /api/post/trigger
+Sun, 25 Nov 2018 21:23:14 GMT express:router query  : /api/post/trigger
+api debug Got keyboard logitech_g810 and hotkey P
+Sun, 25 Nov 2018 21:23:14 GMT express:router expressInit  : /api/post/trigger
+Sun, 25 Nov 2018 21:23:14 GMT express:router jsonParser  : /api/post/trigger
+Sun, 25 Nov 2018 21:23:14 GMT body-parser:json content-type "application/json"
+Sun, 25 Nov 2018 21:23:14 GMT body-parser:json content-encoding "identity"
+Sun, 25 Nov 2018 21:23:14 GMT body-parser:json read body
+Sun, 25 Nov 2018 21:23:14 GMT body-parser:json parse body
+Sun, 25 Nov 2018 21:23:14 GMT body-parser:json parse json
+Sun, 25 Nov 2018 21:23:14 GMT express:router trim prefix (/api) from url /api/post/trigger
+Sun, 25 Nov 2018 21:23:14 GMT express:router router /api : /api/post/trigger
+Sun, 25 Nov 2018 21:23:14 GMT express:router dispatching POST /post/trigger
+ahk debug #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810\index.ahk; TriggerP()

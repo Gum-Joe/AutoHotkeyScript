@@ -1,0 +1,22 @@
+name: AutoHotKeyScripts
+keyboards:
+  premiere:
+    path: /dev/input/by-id/usb-Logitech_Gaming_Keyboard_G810_166A37573236-event-kbd
+    dir: premiere
+    root: index.ahk
+    hotkeys:
+      $ESC$: TerminatePremiere
+      +$ESC$:
+        type: up
+        func: TerminateGCClient
+      Q: DrapCopyEffects
+      W: AutoResize
+      E: GraphicsCenterAlign
+      ^N: GenerateNewPremiereProject
+addresses:
+  detector: 192.168.0.100
+  server:
+    ipv4: 192.168.0.50
+    port: 8101
+perms:
+  ssh: true
