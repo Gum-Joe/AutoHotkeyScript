@@ -23,11 +23,12 @@ keyboards:
 
       # Numbers
       1: Trigger1 # Heading 1, Word
-      
+
       # Letters
       A: TriggerF24CA
       L: TriggerL # Line length
       P: TriggerP # PRINT
+      # S: ShowSpeedDuration
       ^!+S: SSHPi
 
 addresses:

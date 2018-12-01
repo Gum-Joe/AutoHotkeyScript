@@ -4,7 +4,7 @@
 
 ; Goto dir
 GotoDir(dir) {
-  if (WinActive(APP_ID_EXPLORER)) {
+  if (WinActive(APP_ID_EXPLORER) or WinActivate("ahk_class #32770")) {
     Send "!D"
     Send dir
     Send "{Enter}"

@@ -1,0 +1,3 @@
+#Include preset.ahk
+
+preset("Ultra Key")
