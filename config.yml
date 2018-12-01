@@ -5,6 +5,8 @@ keyboards:
     dir: ./logitech_g810
     root: index.ahk
     hotkeys:
+      # NOTE: A lot of remappings are to trigger function for each keys to control which hotkeys to run depending on the app
+      # See index.ahk for these function for more descriptive names for what each funcion does.
       +$ESC$: TerminatePremiere
       $ESC$:
         func: TerminateGCClient
@@ -14,10 +16,20 @@ keyboards:
       ^N: GenerateNewPremiereProject
 
       # Mutli
-      P: TriggerP
-      F1: TriggerF1
-      1: Trigger1
+      # Function keys
+      F1: TriggerF1 # Open dir
+      F2: TriggerF2 # Open dir
+      F3: TriggerF3 # Open dir
+
+      # Numbers
+      1: Trigger1 # Heading 1, Word
+      
+      # Letters
       A: TriggerF24CA
+      L: TriggerL # Line length
+      P: TriggerP # PRINT
+      ^!+S: SSHPi
+
 addresses:
   detector: 192.168.0.100
   server:

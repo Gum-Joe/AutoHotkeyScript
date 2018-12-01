@@ -8,7 +8,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 F4::
   if (WinActive("ahk_exe WINWORD.EXE")) {
     MouseGetPos OldPosX, OldPosY
-    Click 397, 123
+    Click 410, 118
     MouseMove OldPosX, OldPosY
   }
 Return

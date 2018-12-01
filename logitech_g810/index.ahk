@@ -35,6 +35,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 #Include ./premiere/index.ahk
 #Include ./office/index.ahk
 #Include ./explorer/index.ahk
+#Include ./general/index.ahk
 
 ; Common trigger check
 WinActiveOffice() {
@@ -50,9 +51,19 @@ TriggerP() {
   }
 }
 
-; Tr9gger for F1
+; Trigger for F1
 TriggerF1() {
   GotoHomework()
+}
+
+; Trigger for F2
+TriggerF2() {
+  GotoYTAssets()
+}
+
+; Trigger for F3
+TriggerF3() {
+  GotoYTCoreAssets()
 }
 
 ; Trigger for 1
@@ -62,6 +73,11 @@ Trigger1() {
   }
 }
 
+TriggerL() {
+  if (WinActive(APP_ID_WORD)) {
+    FocusLineSpacing()
+  }
+}
 
 TriggerF24CA() {
   ;Send "{F24 down}"

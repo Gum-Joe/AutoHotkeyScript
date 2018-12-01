@@ -17,3 +17,13 @@ GotoDir(dir) {
 GotoHomework() {
   GotoDir(HOMEWORK_ROOT CURRENT_YEAR)
 }
+
+; Goto Assets DIR
+GotoYTAssets() {
+  GotoDir(ASSET_PATH)
+}
+
+; Goto Core Assets DIR
+GotoYTCoreAssets() {
+  GotoDir(ASSET_PATH "\Core Assets")
+}
