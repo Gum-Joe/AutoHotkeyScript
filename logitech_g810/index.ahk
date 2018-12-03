@@ -84,3 +84,8 @@ TriggerF24CA() {
   Send "{Ctrl}A"
   ;Send "{F24 up}"
 }
+
+; For testing purposes
+TestIfRunning() {
+  MsgBox "Running."
+}

@@ -13,13 +13,24 @@ keyboards:
       Q: DrapCopyEffects
       W: AutoResize
       E: GraphicsCenterAlign
+      O: OpenCurrentProjectFolderEditing
+      ^O: OpenCurrentProjectFolderProgramming
+      +O: OpenCurrentProjectEditingApp # Loads the premiere file in
       ^N: GenerateNewPremiereProject
 
       # Mutli
       # Function keys
-      F1: TriggerF1 # Open dir
-      F2: TriggerF2 # Open dir
-      F3: TriggerF3 # Open dir
+      # Setting for now to only what's been written
+      # Will be replaced by Trigger<key>() when time comes
+      F1: GotoHomework # Open dir
+      # These function allow me to go to a specific subject
+      # Ideally f1 + letter would be used, but then f1 would be fired
+      # Will implement a 'wait until clear' toggle in 2Keys
+      # that waits for the pressed keys to clear
+      # OR a modifiyer key option in config
+      +F1G: GotoHomeworkGerman
+      F2: GotoYTAssets # Open dir
+      F3: GotoYTCoreAssets # Open dir
 
       # Numbers
       1: Trigger1 # Heading 1, Word
@@ -30,6 +41,8 @@ keyboards:
       P: TriggerP # PRINT
       # S: ShowSpeedDuration
       ^!+S: SSHPi
+      # For testing
+      ^!+T: TestIfRunning
 
 addresses:
   detector: 192.168.0.100

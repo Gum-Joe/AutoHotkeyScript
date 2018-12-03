@@ -4,8 +4,9 @@
 
 ; Goto dir
 GotoDir(dir) {
-  if (WinActive(APP_ID_EXPLORER) or WinActivate("ahk_class #32770")) {
+  if (WinActive(APP_ID_EXPLORER) or WinActive("ahk_class #32770")) {
     Send "!D"
+    Sleep 50
     Send dir
     Send "{Enter}"
   } else {
@@ -16,6 +17,11 @@ GotoDir(dir) {
 ; Goto H/W DIR
 GotoHomework() {
   GotoDir(HOMEWORK_ROOT CURRENT_YEAR)
+}
+
+; Go to German stuff
+GotoHomeworkGerman() {
+  GotoDir(HOMEWORK_ROOT CURRENT_YEAR "\German")
 }
 
 ; Goto Assets DIR
