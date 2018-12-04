@@ -44,7 +44,7 @@ WinActiveOffice() {
 
 ; Triggers HotKey for letter P
 TriggerP() {
-  if (WinActive(APP_ID_WORD) or WinActive(APP_ID_POWERPOINT) or WinActive(APP_ID_EXCEL)) {
+  if (WinActiveOffice()) {
     SetPrint()
   } else if (WinActive(APP_ID_PREMIERE)) {
     OutputDebug "None set"
@@ -70,6 +70,13 @@ TriggerF3() {
 Trigger1() {
   if (WinActiveOffice()) {
     SetHeader1()
+  }
+}
+
+; Trigger for 2
+Trigger2() {
+  if (WinActiveOffice()) {
+    SetHeader2()
   }
 }
 

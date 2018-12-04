@@ -9,6 +9,7 @@ SetPrint() {
   Loop 3 {
     Send "{Tab}" ; Select Printer Properties
   }
+  Sleep 250
   Send "{Enter}"
   Sleep 250
   Loop 3 {
@@ -17,6 +18,8 @@ SetPrint() {
   Sleep 250
 
   ; Which settings to set?
+  ; The dialog auto focuses the current quality setting
+  ; So we can use it to check the current quality.
   FocusedHwnd := ControlGetFocus(WinGetTitle("ahk_class #32770"))
   FocusedClassNN := ControlGetClassNN(FocusedHwnd)
   

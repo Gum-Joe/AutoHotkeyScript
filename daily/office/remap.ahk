@@ -3,7 +3,7 @@
 
 ^+Z::
   if (WinActive("ahk_exe WINWORD.EXE")) {
-    SendInput ^Y
+    Send USE A COM
     return
   } else {
     Send ^+Z
