@@ -1,4 +1,5 @@
 #Include ..\..\..\common\check_colour_at.ahk
+#Include constants.ahk
 ; Verify mode
 BaseY := 73
 ; BaseCol = 0x26405A
@@ -8,7 +9,39 @@ ShowWaitDialogue() { ; Displayed during mode switch
   MsgBox 0, Waiting, "Waiting for Premiere to switch modes. Press Enter when done."
 }
 
-SetWorkspace(mode) {
+; New set workspace
+; Sets using keyboard shortcuts
+; Uses WORKSPACES from ./constants.ahk
+
+SetWorkspace(name) {
+  if not WORKSPACES.HasKey(name) {
+    MsgBox "Workspace " name " not found"
+    return false
+  }
+
+  Send "!+" WORKSPACES[name]
+}
+
+; Auto setting funcions
+; Used for hotkeys, here because they can be used by other functions
+WorkspaceEditing() {
+  SetWorkspace(WORKSPACE_EDITING)
+}
+WorkspaceEffects() {
+  SetWorkspace(WORKSPACE_EFFECTS)
+}
+WorkspaceColour() {
+  SetWorkspace(WORKSPACE_COLOUR)
+}
+WorkspaceAudio() {
+  SetWorkspace(WORKSPACE_AUDIO)
+}
+WorkspaceGraphics() {
+  SetWorkspace(WORKSPACE_GRAPHICS)
+}
+
+; Old method, do not use
+SetWorkspaceOld(mode) {
   WorkspaceCoords := Object() ; X, Y and colour to check for each tab ; Order of tabs: Default - Assembly - Editing - Color - Effects - Audio - Graphics - Libraries - Color BIG - Graphics BIG - Preview
   WorkspaceCoords["Assembly"] := [592, 71, BaseCol]
   WorkspaceCoords["Editing"]:= [681, BaseY, BaseCol]

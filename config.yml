@@ -33,8 +33,11 @@ keyboards:
       F3: GotoYTCoreAssets # Open dir
 
       # Numbers
-      1: Trigger1 # Heading 1, Word
-      2: Trigger2 # Heading 2, Word
+      1: Trigger1 # Heading 1; Word, Editing; Premiere
+      2: Trigger2 # Heading 2; Word, Effects; Premiere
+      3: Trigger3 # Graphics; Premiere
+      4: Trigger4 # Colour; Premiere
+      5: Trigger5 # Audio; Premiere
 
       # Letters
       A: TriggerF24CA

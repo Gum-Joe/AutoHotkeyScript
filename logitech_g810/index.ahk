@@ -37,9 +37,12 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 #Include ./explorer/index.ahk
 #Include ./general/index.ahk
 
-; Common trigger check
+; Common trigger checks
 WinActiveOffice() {
   return (WinActive(APP_ID_WORD) or WinActive(APP_ID_POWERPOINT) or WinActive(APP_ID_EXCEL))
+}
+WinActivePremiere() {
+  return (WinActive(APP_ID_PREMIERE) or WinActive(APP_EXE_PREMIERE))
 }
 
 ; Triggers HotKey for letter P
@@ -70,6 +73,8 @@ TriggerF3() {
 Trigger1() {
   if (WinActiveOffice()) {
     SetHeader1()
+  } else if (WinActivePremiere()) {
+    WorkspaceEditing()
   }
 }
 
@@ -77,6 +82,29 @@ Trigger1() {
 Trigger2() {
   if (WinActiveOffice()) {
     SetHeader2()
+  } else if (WinActivePremiere()) {
+    WorkspaceEffects()
+  }
+}
+
+; Trigger for 3
+Trigger3() {
+  if (WinActivePremiere()) {
+    WorkspaceGraphics()
+  }
+}
+
+; Trigger for 4
+Trigger4() {
+  if (WinActivePremiere()) {
+    WorkspaceColour()
+  }
+}
+
+; Trigger for 5
+Trigger5() {
+  if (WinActivePremiere()) {
+    WorkspaceAudio()
   }
 }
 
