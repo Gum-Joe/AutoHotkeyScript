@@ -35,6 +35,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 #Include ./premiere/index.ahk
 #Include ./office/index.ahk
 #Include ./explorer/index.ahk
+#Include ./browser/index.ahk
 #Include ./general/index.ahk
 
 ; Common trigger checks
@@ -89,14 +90,18 @@ Trigger2() {
 
 ; Trigger for 3
 Trigger3() {
-  if (WinActivePremiere()) {
+  if (WinActiveOffice()) {
+    SetHeader3()
+  } else if (WinActivePremiere()) {
     WorkspaceGraphics()
   }
 }
 
 ; Trigger for 4
 Trigger4() {
-  if (WinActivePremiere()) {
+  if (WinActiveOffice()) {
+    SetTitle()
+  } else if (WinActivePremiere()) {
     WorkspaceColour()
   }
 }
@@ -118,6 +123,12 @@ TriggerF24CA() {
   ;Send "{F24 down}"
   Send "{Ctrl}A"
   ;Send "{F24 up}"
+}
+
+TriggerD() {
+  if (WinActive(APP_ID_FIREFOX)) {
+    OpenLastDownloadFirefox()
+  }
 }
 
 ; For testing purposes

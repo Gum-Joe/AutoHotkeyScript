@@ -4,7 +4,7 @@
 DrapCopyEffects() {
   BasePremiereFunctions()
 
-  KeyWait "LButton", D
+  KeyWait "LButton", "D"
   MouseGetPos EffectX, EffectY
   KeyWait "LButton"
   MouseGetPos ClipX, ClipY

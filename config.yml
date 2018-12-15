@@ -43,6 +43,7 @@ keyboards:
       A: TriggerF24CA
       L: TriggerL # Line length
       P: TriggerP # PRINT
+      D: TriggerD # Open last dowwnload
       # S: ShowSpeedDuration
       ^!+S: SSHPi
       # For testing
