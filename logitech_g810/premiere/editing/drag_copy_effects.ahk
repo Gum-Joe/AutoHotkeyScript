@@ -4,6 +4,9 @@
 DrapCopyEffects() {
   BasePremiereFunctions()
 
+  ; Get original
+  MouseGetPos CurrentX, CurrentY
+
   KeyWait "LButton", "D"
   MouseGetPos EffectX, EffectY
   KeyWait "LButton"
@@ -15,13 +18,15 @@ DrapCopyEffects() {
   Loop 5 {
     Send "{Down}"
   }
-  Send "Enter"
+  Send "{Enter}"
   MouseMove ClipX, ClipY ; Click the clip
   Click
   MouseMove EffectX, EffectY
   Click "right"
   Loop 6 {
-    Send "Down"
+    Send "{Down}"
   }
-  Send "Enter"
+  Send "{Enter}"
+
+  MouseMove CurrentX, CurrentY
 }

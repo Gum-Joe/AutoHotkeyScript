@@ -31,3 +31,4 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 #Include audio/index.ahk
 #Include editing/index.ahk
 #Include graphics/index.ahk
+#Include colour/index.ahk

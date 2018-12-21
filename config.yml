@@ -11,12 +11,14 @@ keyboards:
       $ESC$:
         func: TerminateGCClient
       Q: DrapCopyEffects
+      M: GoToMasterEffects
       W: AutoResize
       E: GraphicsCenterAlign
       O: OpenCurrentProjectFolderEditing
       ^O: OpenCurrentProjectFolderProgramming
       +O: OpenCurrentProjectEditingApp # Loads the premiere file in
       ^N: GenerateNewPremiereProject
+      C: CurveMarkLumetri
 
       # Mutli
       # Function keys
