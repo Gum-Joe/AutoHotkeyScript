@@ -16,12 +16,38 @@ Return
 Return
 
 ; General Apps
+; From https://www.youtube.com/watch?v=OqyQABySV8k
 ^!Numpad4::
-  Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+  ; If a windows is not open open one
+  IfWinNotExist ahk_class MozillaWindowClass
+    Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+  ; Create a group with all firefoxes
+  GroupAdd, theFoxes, ahk_class MozillaWindowClass
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe firefox.exe") {
+    GroupActivate, theFoxes, r
+  } else {
+    ; Else activate the last explorer
+    WinActivate, ahk_class MozillaWindowClass
+  }
 Return
+
+; From https://www.youtube.com/watch?v=OqyQABySV8k
 ^!Numpad5::
-  Run, "explorer.exe"
+  ; If a windows is not open open one
+  IfWinNotExist ahk_class CabinetWClass
+    Run, "explorer.exe"
+  ; Create a group with all explorers
+  GroupAdd, theExplorers, ahk_class CabinetWClass
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe explorer.exe") {
+    GroupActivate, theExplorers, r
+  } else {
+    ; Else activate the last explorer
+    WinActivate, ahk_class CabinetWClass
+  }
 Return
+
 ^!Numpad1::
   Run, "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
 Return

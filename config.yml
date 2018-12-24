@@ -5,52 +5,37 @@ keyboards:
     dir: ./logitech_g810
     root: index.ahk
     hotkeys:
-      # NOTE: A lot of remappings are to trigger function for each keys to control which hotkeys to run depending on the app
-      # See index.ahk for these function for more descriptive names for what each funcion does.
       +$ESC$: TerminatePremiere
-      $ESC$:
-        func: TerminateGCClient
+      $ESC$: TerminateGCClient
       Q: DrapCopyEffects
       M: GoToMasterEffects
       W: AutoResize
       E: GraphicsCenterAlign
       O: OpenCurrentProjectFolderEditing
       ^O: OpenCurrentProjectFolderProgramming
-      +O: OpenCurrentProjectEditingApp # Loads the premiere file in
+      +O: OpenCurrentProjectEditingApp
       ^N: GenerateNewPremiereProject
       C: CurveMarkLumetri
-
-      # Mutli
-      # Function keys
-      # Setting for now to only what's been written
-      # Will be replaced by Trigger<key>() when time comes
-      F1: GotoHomework # Open dir
-      # These function allow me to go to a specific subject
-      # Ideally f1 + letter would be used, but then f1 would be fired
-      # Will implement a 'wait until clear' toggle in 2Keys
-      # that waits for the pressed keys to clear
-      # OR a modifiyer key option in config
+      
+      F1: GotoHomework
       +F1G: GotoHomeworkGerman
-      F2: GotoYTAssets # Open dir
-      F3: GotoYTCoreAssets # Open dir
+      F2: GotoYTAssets
+      F3: GotoYTCoreAssets
 
-      # Numbers
-      1: Trigger1 # Heading 1; Word, Editing; Premiere
-      2: Trigger2 # Heading 2; Word, Effects; Premiere
-      3: Trigger3 # Graphics; Premiere
-      4: Trigger4 # Colour; Premiere
-      5: Trigger5 # Audio; Premiere
-
-      # Letters
-      A: TriggerF24CA
-      L: TriggerL # Line length
-      P: TriggerP # PRINT
-      D: TriggerD # Open last dowwnload
-      # S: ShowSpeedDuration
       ^!+S: SSHPi
-      # For testing
       ^!+T: TestIfRunning
 
+      ^E: AutoExportAudacityAudio
+
+      1: Trigger1
+      2: Trigger2
+      3: Trigger3
+      4: Trigger4
+      5: Trigger5
+      A: TriggerF24CA
+      L: TriggerL
+      P: TriggerP
+      D: TriggerD
 addresses:
   detector: 192.168.0.100
   server:

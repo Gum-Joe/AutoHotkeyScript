@@ -33,6 +33,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 
 ; Hotkey dirs
 #Include ./premiere/index.ahk
+#Include ./audacity/index.ahk
 #Include ./office/index.ahk
 #Include ./explorer/index.ahk
 #Include ./browser/index.ahk
