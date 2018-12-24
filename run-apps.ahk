@@ -33,7 +33,7 @@ Return
 Return
 
 ; From https://www.youtube.com/watch?v=OqyQABySV8k
-^!Numpad5::
+SwitchToExplorer() {
   ; If a windows is not open open one
   IfWinNotExist ahk_class CabinetWClass
     Run, "explorer.exe"
@@ -46,6 +46,14 @@ Return
     ; Else activate the last explorer
     WinActivate, ahk_class CabinetWClass
   }
+}
+
+^!Numpad5::
+  SwitchToExplorer()
+Return
+
+!Numpad5::
+  SwitchToExplorer()
 Return
 
 ^!Numpad1::
