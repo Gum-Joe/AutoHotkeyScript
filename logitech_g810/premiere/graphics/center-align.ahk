@@ -10,10 +10,12 @@ GraphicsCenterAlign_cb() {
 
 GraphicsCenterAlign() {
   EnsurePremiereSelected()
-  SetWorkspace("Graphics")
+  WorkspaceGraphics()
+  MouseGetPos CurrentX, CurrentY
   if not (PixelGetColor(1659, 154) = 0xB4B4B4) {
     Click 1647, 102
   }
   Click 1594, 303
   Click 1618, 301
+  MouseMove CurrentX, CurrentY
 }

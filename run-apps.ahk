@@ -49,7 +49,7 @@ SwitchToExplorer() {
 }
 
 ^!Numpad5::
-  SwitchToExplorer()
+  Run, "explorer.exe"
 Return
 
 !Numpad5::
@@ -59,9 +59,25 @@ Return
 ^!Numpad1::
   Run, "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
 Return
+
+!Numpad2::
+; If a windows is not open open one
+  IfWinNotExist ahk_class OpusApp
+    Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
+  ; Create a group with all explorers
+  GroupAdd, theWords, ahk_class OpusApp
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe WINWORD.exe") {
+    GroupActivate, theWords, r
+  } else {
+    ; Else activate the last explorer
+    WinActivate, ahk_class OpusApp
+  }
+Return
 ^!Numpad2::
   Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
 Return
+
 ^!Numpad3::
   Run, "C:\Program Files\Microsoft Office\root\Office16\EXCEL.exe"
 Return

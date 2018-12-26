@@ -16,6 +16,7 @@ keyboards:
       +O: OpenCurrentProjectEditingApp
       ^N: GenerateNewPremiereProject
       C: CurveMarkLumetri
+      A: RemoveUnusedMergedTracks
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman
@@ -32,7 +33,6 @@ keyboards:
       3: Trigger3
       4: Trigger4
       5: Trigger5
-      A: TriggerF24CA
       L: TriggerL
       P: TriggerP
       D: TriggerD
