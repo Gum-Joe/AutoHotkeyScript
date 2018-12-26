@@ -17,12 +17,13 @@ GetGraphicsTemplate(template := "Open Sans", track := 3) {
   Send "{Tab}"
   ; Go to Carret, using Taran's code
   sleep 500 ;sometimes, premiere takes some time to notice that the text box has been highlighted. in that case, it will not return any value for the position of the Caret. Tehrefore, you have to wait.
+  Send "{Backspace}" ; Clear
   CaretGetPos(CaretX, CaretY)
   MouseMove CaretX, CaretY, 0 ; Move to Caret
   ; Type the template
   Send template
   Send "{Enter}"
-  Sleep 50
+  Sleep 100
 
   ; Step 3: Select teplate
   ; Move directly down to the only selectable one
@@ -58,4 +59,8 @@ GetGraphicsTemplate(template := "Open Sans", track := 3) {
 
   ; Step 5: Drag to the final coords
   MouseClickDrag "L", , , NextLineX, NextLineY
+  Sleep 1000
+
+  ; Step 6: You probably want to edit the text next, so auto select text tool
+  ; Send SHORTCUT_TEXT_TOOL
 }
