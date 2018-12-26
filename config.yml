@@ -17,6 +17,7 @@ keyboards:
       ^N: GenerateNewPremiereProject
       C: CurveMarkLumetri
       A: RemoveUnusedMergedTracks
+      G: GetGraphicsTemplate
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman

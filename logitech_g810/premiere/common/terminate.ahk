@@ -11,7 +11,5 @@ TerminatePremiere() {
 ; ahk_class ADOBEGCCLIENT
 ; ahk_exe AdobeGCClient.exe
 TerminateGCClient() {
-  if (WinActive ahk_class ADOBEGCCLIENT) {
-    ProcessClose "AdobeGCClient.exe"
-  }
+  ProcessClose "AdobeGCClient.exe"
 }

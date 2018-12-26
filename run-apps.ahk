@@ -60,7 +60,7 @@ Return
   Run, "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
 Return
 
-!Numpad2::
+^!Numpad2::
 ; If a windows is not open open one
   IfWinNotExist ahk_class OpusApp
     Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
@@ -74,7 +74,7 @@ Return
     WinActivate, ahk_class OpusApp
   }
 Return
-^!Numpad2::
+^!+Numpad2::
   Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
 Return
 
