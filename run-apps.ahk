@@ -17,7 +17,7 @@ Return
 
 ; General Apps
 ; From https://www.youtube.com/watch?v=OqyQABySV8k
-^!Numpad4::
+!Numpad4::
   ; If a windows is not open open one
   IfWinNotExist ahk_class MozillaWindowClass
     Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
@@ -32,6 +32,9 @@ Return
   }
 Return
 
+^!Numpad4::
+  Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+Return
 ; From https://www.youtube.com/watch?v=OqyQABySV8k
 SwitchToExplorer() {
   ; If a windows is not open open one

@@ -26,19 +26,23 @@ GetGraphicsTemplate(template := "Open Sans", track := 3) {
   Sleep 100
 
   ; Step 3: Select teplate
-  ; Move directly down to the only selectable one
-  ControlGetPos ControlX, ControlY, , , "DroverLord - Window Class73", WinGetTitle("A")
-  MouseMove ControlX, ControlY
   ; Find a black pixel we can select
-  MouseGetPos Current2X, Current2Y
-  PixelSearch BlackX, BlackY, Current2X, Current2Y, Current2X + 170, Current2Y + 100, 0x000000
+  ; Get info about panel
+  ControlGetPos GraphX, GraphY, GraphWidth, GraphHeight, ControlGetFocus("A")
+  ; Use this info to search the panel for a black pixel, which is on the template and can be used to select it.
+  PixelSearch BlackX, BlackY, GraphX, GraphY, GraphX + GraphWidth, GraphY + GraphHeight, 0x000000
   Click BlackX, BlackY
 
   ; Step 4: Locate where to put clip
   Send SHORTCUT_TIMELINES_ACTIVATE
   Sleep 500 ; Allow panel selection to change
   ; Get info about the timelines panel
-  ControlGetPos TimeX, TimeY, TimeWidth, TimeHeight, CONTROL_TIMELINE, WinGetTitle("A")
+  ; Timeline ClassNN changes, so we also need to get that
+  Send "{ESC}" ; So premiere accepts shortcuts
+  Send SHORTCUT_TIMELINES_ACTIVATE
+  Sleep 50
+  controlTimeline := ControlGetClassNN(ControlGetFocus("A"))
+  ControlGetPos TimeX, TimeY, TimeWidth, TimeHeight, controlTimeline, WinGetTitle("A")
   ; Looku for a matching playhead pixel
   ; The +100 is to exclude i.e. timecode, which has the same colour
   PixelSearch PlayheadX, PlayheadY, TimeX, TimeY + 50, TimeX + TimeWidth, TimeY + TimeHeight, 0x2D8CEB
