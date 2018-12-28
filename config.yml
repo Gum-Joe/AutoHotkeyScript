@@ -18,6 +18,7 @@ keyboards:
       C: CurveMarkLumetri
       A: RemoveUnusedMergedTracks
       G: GetGraphicsTemplate
+      B: TransitionDipToBlack
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman

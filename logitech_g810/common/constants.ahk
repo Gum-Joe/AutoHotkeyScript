@@ -1,4 +1,5 @@
 ; Constants
+Global ABSOLUTE_SCRIPT_PATH := "D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\logitech_g810" ; Required as relative paths aren't automatically to this script
 
 ; App id
 ; Used in function such as WinActivate()
@@ -33,3 +34,12 @@ Global DEFAULT_INCLUDE_TXT := ASSET_PATH "\INCLUDE_DEFAULT.txt"
 
 ; Config file, where stuff such as current Project is set
 Global CONFIG_FILE := REPO_ROOT "/config.ini" ; Relative to root of project
+
+; Assests for use by i.e. image search root
+; A_WorkingDir is wrong, need to fix at some point
+Global SCRIPT_ASSETS_ROOT := ABSOLUTE_SCRIPT_PATH "\assets"
+; Asset List
+Global SCRIPT_ASSET_LIST := {
+  transitionIcon: SCRIPT_ASSETS_ROOT "\TransitionIcon.png",
+  transitionIconAlt: SCRIPT_ASSETS_ROOT "\TransitionIconAlt.png" ; For if transition is selected
+}

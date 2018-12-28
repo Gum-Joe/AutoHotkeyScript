@@ -1,0 +1,4 @@
+; Test trigger for add-transition
+#Include add-transition.ahk
+
+addTransition("Dip to Black")
