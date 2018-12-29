@@ -49,7 +49,7 @@ addTransition(transition) {
   MouseClickDrag "L", , , DestX, DestY
 }
 
-; My acutal transition
+; My acutal transitions
 TransitionDipToBlack() {
   addTransition("Dip to Black")
 }

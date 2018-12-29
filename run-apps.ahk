@@ -1,6 +1,24 @@
 ; Script to launch apps when I press a certain key on the ^!Numpad7
 #SingleInstance force
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+
+; From https://www.youtube.com/watch?v=OqyQABySV8k
+appSwitcher(appClass, appPath) {
+  groupName := "theWindowsOf" appClass
+  ; If a windows is not open open one
+  IfWinNotExist ahk_class %appClass%
+    Run appPath
+  ; Create a group with all of them
+  GroupAdd %groupName%, ahk_class %appClass%
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_class " appClass) {
+    GroupActivate %groupName%, r
+  } else {
+    ; Else activate the last explorer
+    WinActivate ahk_class %appClass%
+  }
+}
+
 ; Adobe apps
 ^!Numpad7::
   Run, "C:\Program Files\Adobe\Adobe Premiere Pro CC 2018\Adobe Premiere Pro.exe"
@@ -16,66 +34,29 @@ Return
 Return
 
 ; General Apps
-; From https://www.youtube.com/watch?v=OqyQABySV8k
+; Firefox
 !Numpad4::
-  ; If a windows is not open open one
-  IfWinNotExist ahk_class MozillaWindowClass
-    Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
-  ; Create a group with all firefoxes
-  GroupAdd, theFoxes, ahk_class MozillaWindowClass
-  ; If currently on one windows, go to the next
-  if WinActive("ahk_exe firefox.exe") {
-    GroupActivate, theFoxes, r
-  } else {
-    ; Else activate the last explorer
-    WinActivate, ahk_class MozillaWindowClass
-  }
+  appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
 Return
-
 ^!Numpad4::
   Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
 Return
-; From https://www.youtube.com/watch?v=OqyQABySV8k
-SwitchToExplorer() {
-  ; If a windows is not open open one
-  IfWinNotExist ahk_class CabinetWClass
-    Run, "explorer.exe"
-  ; Create a group with all explorers
-  GroupAdd, theExplorers, ahk_class CabinetWClass
-  ; If currently on one windows, go to the next
-  if WinActive("ahk_exe explorer.exe") {
-    GroupActivate, theExplorers, r
-  } else {
-    ; Else activate the last explorer
-    WinActivate, ahk_class CabinetWClass
-  }
-}
 
+; Explorer
+!Numpad5::
+  appSwitcher("CabinetWClass", "explorer.exe")
+Return
 ^!Numpad5::
   Run, "explorer.exe"
-Return
-
-!Numpad5::
-  SwitchToExplorer()
 Return
 
 ^!Numpad1::
   Run, "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
 Return
 
+; Word
 ^!Numpad2::
-; If a windows is not open open one
-  IfWinNotExist ahk_class OpusApp
-    Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
-  ; Create a group with all explorers
-  GroupAdd, theWords, ahk_class OpusApp
-  ; If currently on one windows, go to the next
-  if WinActive("ahk_exe WINWORD.exe") {
-    GroupActivate, theWords, r
-  } else {
-    ; Else activate the last explorer
-    WinActivate, ahk_class OpusApp
-  }
+  appSwitcher("OpusApp", "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe")
 Return
 ^!+Numpad2::
   Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
