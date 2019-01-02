@@ -1,7 +1,7 @@
 ; Base functions for Premiere & Main common
 ; Designed for v2
-#Include ensure-selected.ahk
-#Include set-workspace.ahk
+#Include ensure_selected.ahk
+#Include set_workspace.ahk
 #Include terminate.ahk
 #Include ../../common/constants.ahk
 #Include shortcuts.ahk

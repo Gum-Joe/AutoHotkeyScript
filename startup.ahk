@@ -8,5 +8,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Uses absolute paths
 ; You'll need to change them
 #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\run-apps.ahk
-#Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\daily\office\use-default-colour.ahk
+#Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\daily\office\use_default_colour.ahk
 #Include D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\daily\premiere\right_click_timeline.ahk

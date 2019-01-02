@@ -1,5 +1,5 @@
 ; Gets Open Sans graphics template
-#Include get-template.ahk
+#Include get_template.ahk
 
 TemplateOpenSans() {
   GetGraphicsTemplate("Open Sans")

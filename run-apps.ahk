@@ -7,7 +7,7 @@ appSwitcher(appClass, appPath) {
   groupName := "theWindowsOf" appClass
   ; If a windows is not open open one
   IfWinNotExist ahk_class %appClass%
-    Run appPath
+    Run %appPath%
   ; Create a group with all of them
   GroupAdd %groupName%, ahk_class %appClass%
   ; If currently on one windows, go to the next
@@ -35,12 +35,24 @@ Return
 
 ; General Apps
 ; Firefox
+#IfWinNotActive ahk_class OpusApp
 !Numpad4::
   appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
 Return
 ^!Numpad4::
   Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
 Return
+#IfWinNotActive
+
+#IfWinActive ahk_class OpusApp
+^!Numpad4::
+  appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
+Return
+
+^!+Numpad4::
+  Run, "C:\Program Files\Mozilla Firefox\firefox.exe"
+Return
+#IfWinActive
 
 ; Explorer
 !Numpad5::
@@ -50,16 +62,16 @@ Return
   Run, "explorer.exe"
 Return
 
-^!Numpad1::
-  Run, "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
-Return
-
 ; Word
-^!Numpad2::
+^!Numpad1::
   appSwitcher("OpusApp", "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe")
 Return
-^!+Numpad2::
+^!+Numpad1::
   Run, "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
+Return
+
+^!Numpad2::
+  Run, "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
 Return
 
 ^!Numpad3::

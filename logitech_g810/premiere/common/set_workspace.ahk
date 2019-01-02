@@ -51,7 +51,7 @@ SetWorkspaceOld(mode) {
   WorkspaceCoords["Graphics"] := [992, 72, 0x2B7D97]
   WorkspaceCoords["Libraries"] := [1057, 72, 0x298CB4]
 
-  if not (CheckColourAt(WorkspaceCoords[mode][0], WorkspaceCoords[mode][1], WorkspaceCoords[mode][2]) = true) {
+  if not (checkColourAt(WorkspaceCoords[mode][0], WorkspaceCoords[mode][1], WorkspaceCoords[mode][2]) = true) {
     X := WorkspaceCoords[mode][0]
     Y := WorkspaceCoords[mode][1]
     ;Gui := GuiCreate()

@@ -1,3 +1,3 @@
-#Include set-print.ahk
+#Include set_print.ahk
 #Include headers.ahk
-#Include line-space.ahk
+#Include line_space.ahk
