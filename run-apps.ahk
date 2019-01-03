@@ -21,7 +21,7 @@ appSwitcher(appClass, appPath) {
 
 ; Adobe apps
 ^!Numpad7::
-  Run, "C:\Program Files\Adobe\Adobe Premiere Pro CC 2018\Adobe Premiere Pro.exe"
+  Run, "C:\Program Files\Adobe\Adobe Premiere Pro CC 2019\Adobe Premiere Pro.exe"
 Return
 ^!Numpad8::
   Run, "C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\AfterFX.exe"

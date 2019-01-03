@@ -15,7 +15,7 @@ Global APP_ID_FIREFOX := "ahk_class MozillaWindowClass"
 Global APP_ID_AUDACITY := "ahk_exe audacity.exe"
 Global APP_ID_EXE_AUDACITY := "ahk_exe audacity.exe"
 Global APP_PATH_GIT_BASH := "C:\Program Files\Git\git-bash.exe"
-Global PREMIERE_PATH := "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Adobe Premiere Pro CC 2018"
+Global PREMIERE_PATH := "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Adobe Premiere Pro CC 2019"
 Global PREMIERE_EXE := "Adobe Premiere Pro.exe"
 Global PREMIERE_CLASS := "Premiere Pro"
 
