@@ -20,7 +20,10 @@ keyboards:
       G: GetGraphicsTemplate
       B: TransitionDipToBlack
       U: EffectUltraKey
+      K: EffectColorKey
       T: TemplateOpenSans
+      F: EffectHorizontalFlip
+      I: InsertAndAutoResize
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman

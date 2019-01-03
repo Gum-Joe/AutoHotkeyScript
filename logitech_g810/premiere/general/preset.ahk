@@ -41,12 +41,13 @@ preset(name, isTransition := false) {
   ; Use ImageSearch t
   ;resultCode := ImageSearch(PresetX, PresetY, EffectsX, EffectsY, EffectsX + EffectsWidth, EffectsY + EffectsHeight, SCRIPT_ASSET_LIST["transitionIcon"])
   ; Wrapper to make search easier
+  ; -20 to not detect bin icons
   _searcher(target, isPicture := False) {
     code := 0
     if not isPicture {
-      code := PixelSearch(PresetX, PresetY, EffectsX + 20, EffectsY + 50, EffectsX + EffectsWidth, EffectsY + EffectsHeight, target)
+      code := PixelSearch(PresetX, PresetY, EffectsX + 20, EffectsY + 50, EffectsX + EffectsWidth, EffectsY + EffectsHeight - 20, target)
     } else {
-      code := ImageSearch(PresetX, PresetY, EffectsX + 20, EffectsY + 50, EffectsX + EffectsWidth, EffectsY + EffectsHeight, target)
+      code := ImageSearch(PresetX, PresetY, EffectsX + 20, EffectsY + 50, EffectsX + EffectsWidth, EffectsY + EffectsHeight - 20, target)
     }
 
     return {

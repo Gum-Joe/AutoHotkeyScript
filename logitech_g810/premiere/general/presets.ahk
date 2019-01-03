@@ -8,3 +8,11 @@ TransitionDipToBlack() {
 EffectUltraKey() {
   preset("Ultra Key")
 }
+
+EffectColorKey() {
+  preset("AHK Color Key")
+}
+
+EffectHorizontalFlip() {
+  preset("Horizontal Flip")
+}
