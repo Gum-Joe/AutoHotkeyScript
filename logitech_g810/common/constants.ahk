@@ -39,7 +39,14 @@ Global CONFIG_FILE := REPO_ROOT "/config.ini" ; Relative to root of project
 ; A_WorkingDir is wrong, need to fix at some point
 Global SCRIPT_ASSETS_ROOT := ABSOLUTE_SCRIPT_PATH "\assets"
 ; Asset List
+; Repated code, should be refactored
 Global SCRIPT_ASSET_LIST := {
-  transitionIcon: SCRIPT_ASSETS_ROOT "\TransitionIcon.png",
-  transitionIconAlt: SCRIPT_ASSETS_ROOT "\TransitionIconAlt.png" ; For if transition is selected
+  icons: {
+    root: SCRIPT_ASSETS_ROOT "icons",
+    effects: {
+      root: SCRIPT_ASSETS_ROOT "icons" "effects",
+      transitionIcon: SCRIPT_ASSETS_ROOT "icons" "effects" "\TransitionIcon.png",
+      transitionIconAlt: SCRIPT_ASSETS_ROOT "icons" "effects" "\TransitionIconAlt.png" ; For if transition is selected
+    }
+  }
 }

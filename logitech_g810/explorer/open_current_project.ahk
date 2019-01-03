@@ -1,5 +1,5 @@
 ; Script to open current project i'm working on
-#Include goto-dirs.ahk
+#Include goto_dirs.ahk
 #Include ../common/index.ahk
 
 

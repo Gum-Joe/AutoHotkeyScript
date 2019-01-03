@@ -19,6 +19,7 @@ keyboards:
       A: RemoveUnusedMergedTracks
       G: GetGraphicsTemplate
       B: TransitionDipToBlack
+      U: EffectUltraKey
       T: TemplateOpenSans
       
       F1: GotoHomework
