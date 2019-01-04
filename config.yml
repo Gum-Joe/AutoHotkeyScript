@@ -15,7 +15,6 @@ keyboards:
       ^O: OpenCurrentProjectFolderProgramming
       +O: OpenCurrentProjectEditingApp
       ^N: GenerateNewPremiereProject
-      C: CurveMarkLumetri
       A: RemoveUnusedMergedTracks
       G: GetGraphicsTemplate
       B: TransitionDipToBlack
@@ -24,6 +23,7 @@ keyboards:
       T: TemplateOpenSans
       F: EffectHorizontalFlip
       I: InsertAndAutoResize
+      C: OpenInAudition
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman
@@ -35,14 +35,14 @@ keyboards:
 
       ^E: AutoExportAudacityAudio
 
-      1: Trigger1
-      2: Trigger2
-      3: Trigger3
-      4: Trigger4
-      5: Trigger5
-      L: TriggerL
-      P: TriggerP
-      D: TriggerD
+      1: Trigger1 # Heading 1
+      2: Trigger2 # Heading 2
+      3: Trigger3 # Heading 3
+      4: Trigger4 # Heading 4
+      5: Trigger5 # Word Title
+      L: TriggerL # Line spacing OR CurveMarkLumetri
+      P: TriggerP # Set Printer Settings
+      D: TriggerD # Open last Firefox donwload
 addresses:
   detector: 192.168.0.100
   server:

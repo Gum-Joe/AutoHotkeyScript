@@ -73,13 +73,29 @@ if (colorr = timeline1 or colorr = timeline2 or colorr = timeline3 or colorr = t
 			{
 			Send \ ;in premiere, this must be set to "move playhead to cursor."
 			Tooltip, Right click playhead mod! ;you can remove this line if you don't like the tooltip. You don't need it!
-			sleep 16 ;this loop will repeat every 16 milliseconds.
+			/*
+			; Since I like to scrub the timelines, instead go to where you would normally drag it and drag
+			MouseGetPos CurrentX, CurrentY, CurrentWin, CurrentControl
+			; Get dimensions of timelines
+  		ControlGetPos TimeX, TimeY, TimeWidth, TimeHeight, %CurrentControl%, A
+  		; Looku for a matching playhead pixel
+  		; The +150 is to exclude i.e. timecode, which has the same colour
+			TimeXAlt := (TimeX + 150)
+			TimeX2 := (TimeX + TimeWidth - 5)
+			TimeY2 := (TimeY + TimeHeight)
+  		PixelSearch PlayheadX, PlayheadY, %TimeXAlt%, %TimeY%, %TimeX2%, %TimeY2%, 0x2D8CEB, 0, Fast RGB
+			; Drag the top of the playhead to current X cord
+			MouseClickDrag L, %PlayheadX%, %PlayheadY%, %CurrentX%, %PlayheadY%
+			; Move back to where we were
+			MouseMove %CurrentX%, %CurrentY%
+			; sleep 16 ;this loop will repeat every 16 milliseconds.
+			*/
 			if GetKeyState("Rbutton", "P") = 0
 				{
-				;msgbox,,,time to break,1 ;I use message boxes when debugging, and then just comment the out rather than deleting them. It's just like disabling a clip in Premiere.
-				tooltip,
-				goto theEnd
-				break
+					;msgbox,,,time to break,1 ;I use message boxes when debugging, and then just comment the out rather than deleting them. It's just like disabling a clip in Premiere.
+					tooltip,
+					goto theEnd
+					break
 				}
 			}
 		}

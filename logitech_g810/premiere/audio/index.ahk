@@ -1,5 +1,6 @@
 #Include ..\common\index.ahk
 #Include remove_unused_merged_tracks.ahk
+#Include open_in_audition.ahk
 
 EssentialAudioPresetBlueYeti_cb() {
   Click 1764, 290 ; Sekect Dialogue

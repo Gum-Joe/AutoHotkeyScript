@@ -117,6 +117,8 @@ Trigger5() {
 TriggerL() {
   if (WinActive(APP_ID_WORD)) {
     FocusLineSpacing()
+  } else if WinActive(APP_ID_PREMIERE) {
+    CurveMarkLumetri()
   }
 }
 
