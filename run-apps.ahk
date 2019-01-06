@@ -23,14 +23,33 @@ appSwitcher(appClass, appPath) {
 ^!Numpad7::
   Run, "C:\Program Files\Adobe\Adobe Premiere Pro CC 2019\Adobe Premiere Pro.exe"
 Return
+; ^!Numpad8::
+;   Run, "C:\Program Files\Adobe\Adobe After Effects CC 2019\Support Files\AfterFX.exe"
+; Return
 ^!Numpad8::
-  Run, "C:\Program Files\Adobe\Adobe After Effects CC 2018\Support Files\AfterFX.exe"
-Return
-^!Numpad9::
   Run, "C:\Program Files\Adobe\Adobe Illustrator CC 2018\Support Files\Contents\Windows\Illustrator.exe"
 Return
-^!Numpad6::
+^!Numpad9::
   Run, "C:\Program Files\Adobe\Adobe Audition CC 2018\Adobe Audition CC.exe"
+Return
+
+; VSCODE
+; Custom version as all electron apps have same ahk_class
+!Numpad6::
+  IfWinNotExist ahk_exe Code.exe
+    Run code
+  ; Create a group with all of them
+  GroupAdd theWindowsOfCode, ahk_exe Code.exe
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe Code.exe") {
+    GroupActivate theWindowsOfCode, r
+  } else {
+    ; Else activate the last code
+    WinActivate ahk_exe Code.exe
+  }
+Return
+^!Numpad6::
+  Run, "code"
 Return
 
 ; General Apps

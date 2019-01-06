@@ -2,20 +2,30 @@
 ; For Office 365
 ; AHK v2
 ; Mapping: P
+#Include helpers.ahk
+
+_setPrintQuality() {
+  ; Set to draft (Button5)
+  ControlFocus "Button5", "A"
+}
+
+_setPrintLayout() {
+  ; Focus setting for double sided
+  ControlFocus "ComboBox2", "A"
+  Send "{Down}"
+  ; Press Up 3 times to get to top
+  Loop 3 {
+    Send "{Up}"
+  }
+  ; Go down to "Flip on lon edge"
+  Send "{Down}"
+}
 
 SetPrint() {
   Send "^p"
-  Sleep 250
-  Loop 3 {
-    Send "{Tab}" ; Select Printer Properties
-  }
-  Sleep 250
-  Send "{Enter}"
-  Sleep 250
-  Loop 3 {
-    Send "{Tab}" ; Highlight settings
-  }
-  Sleep 250
+  SLeep 500
+  ; Open Print Props
+  Send "!PR"
 
   ; Which settings to set?
   ; The dialog auto focuses the current quality setting
@@ -23,19 +33,24 @@ SetPrint() {
   FocusedHwnd := ControlGetFocus(WinGetTitle("ahk_class #32770"))
   FocusedClassNN := ControlGetClassNN(FocusedHwnd)
   
-  ; Set to draft (Button5)
-  if (FocusedClassNN != "Button5") {
-    if (FocusedClassNN = "Button4") {
-      ; Normal, go along one
-      Send "{Right}"
-    } else if (FocusedClassNN = "Button3") {
-      ; Best, go along two
-      Send "{Right}"
-      Send "{Right}"
-    }
-    ; If not a button, it isn't handled
+  ; Ensure on correct tab
+  WinText := WinGetText("A")
+  ; MsgBox WinText
+  if InStr(WinText, "Layout") {
+    _setPrintLayout()
+    Send "^{Tab}"
+    Sleep 500
+    _setPrintQuality()
+  } else {
+    ; On Quality settings
+    _setPrintQuality()
+    Send "^{Tab}"
+    Sleep 500
+    _setPrintLayout()
   }
 
   ; Finalise as mode set, press enter
-  Send "{Enter}"
+  Sleep 500
+  ControlGetPos OKX, OKY, , , "OK", "A"
+  Click OKX, OKY
 }

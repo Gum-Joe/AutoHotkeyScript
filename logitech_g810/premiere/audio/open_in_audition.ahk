@@ -28,18 +28,15 @@ OpenInAudition() {
     break
   }
   ; Step 4: Go to Audition
-  MsgBox Path
   appSwitcher("audition11", APP_PATH_AUDITION)
   Sleep 100
   ; Step 5: Run "Open" And type it
   WinActivate "ahk_exe Adobe Audition CC.exe"
-  WinGetPos Win2X, Win2Y, Win2Width, Win2Height, WinGetTitle("A")
-  MouseMove Win2X, Win2Y
-  SLeep 1000
-  MouseMove Win2X + Win2Width, Win2Y + Win2Height
-  SLeep 2000
-  PixelSearch OpenX, OpenY, Win2X, Win2Y, Win2X + Win2Width, Win2Y + Win2Height, 0xE7E7E7
-  MouseMove OpenX, OpenY
-  SendInput "{!}F"
-  Sleep 100
+  SLeep 100
+  Send "^o" ; For some reason ^O and ^o are different
+  Sleep 500
+  ; Type it
+  Send Path
+  Send "{Enter}"
+  ; OPEN!
 }
