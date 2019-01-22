@@ -25,6 +25,7 @@ keyboards:
       F: EffectHorizontalFlip
       I: InsertAndAutoResize
       C: OpenInAudition
+      N: EffectCrop
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman

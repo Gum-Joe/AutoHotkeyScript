@@ -1,5 +1,6 @@
 ; Terminate script in the event of an emergency (i.e. Infinity loop)
-#Include ../../explorer/open_current_project.ahk
+#Include ../common/index.ahk
+
 TerminateScript() {
   ExitApp 130
 }
@@ -18,5 +19,9 @@ TerminateGCClient() {
 RestartPremiere() {
   TerminatePremiere()
   Sleep 100
-  OpenCurrentProjectEditingApp()
+  ; OpenCurrentProjectEditingApp()
+  ; Func above couldn't be used as I think it makes a circular dep.
+  CurrentProjFolder := IniRead(CONFIG_FILE, "dirs", "current_project_editing")
+  CurrentProjName := IniRead(CONFIG_FILE, "dirs", "current_project_editing_file")
+  Run CurrentProjFolder CurrentProjName
 }

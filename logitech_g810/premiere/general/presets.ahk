@@ -16,3 +16,7 @@ EffectColorKey() {
 EffectHorizontalFlip() {
   preset("Horizontal Flip")
 }
+
+EffectCrop() {
+  preset("Crop")
+}
