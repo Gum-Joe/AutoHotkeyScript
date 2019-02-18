@@ -1,23 +1,11 @@
 name: KeyboardOfMacros
 keyboards:
-  numpad_apps:
-    path: /dev/input/by-id/usb-04d9_1203-event-kbd
+  numpad_apps: # For app switching
+    path: TODO
     dir: ./numpad_apps
     root: index.ahk
     hotkeys:
-      # NUM0 is used as shift key to launc app
-      NUM6: Explorer
-      NUM0NUM6: ExplorerLaunch
-      $NUM_+$: Firefox
-      NUM0$NUM_+$: FirefoxLaunch
-      $NUM_-$: VSCode
-      NUM0$NUM_-$: VSCodeLaunch 
-      NUM3: Word
-      NUM0NUM3: WordLaunch
-      NUM5: Terminal
-      NUM0NUM5: TerminalLaunch
-      NUM9: Premiere
-      NUM0NUM9: PremiereLaunch
+      $NUM5$: MsgBox
   logitech_g810:
     path: /dev/input/by-id/usb-Logitech_Gaming_Keyboard_G810_166A37573236-event-kbd
     dir: ./logitech_g810

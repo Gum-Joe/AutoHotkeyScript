@@ -1,6 +1,8 @@
 ; From https://www.youtube.com/watch?v=OqyQABySV8k
 #Include constants.ahk
 
+; Function to help switching apps
+; From https://www.youtube.com/watch?v=OqyQABySV8k
 appSwitcher(appClass, appPath) {
   groupName := "theWindowsOf" appClass
   ; If a windows is not open open one
