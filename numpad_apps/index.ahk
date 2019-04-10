@@ -91,6 +91,22 @@ WordLaunch() {
   Run "C:\Program Files\Microsoft Office\root\Office16\WINWORD.exe"
 }
 
+; Powerpoint (NUM2)
+Powerpoint() {
+  appSwitcher("PPTFrameClass", "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe")
+}
+PowerpointLaunch() {
+  Run "C:\Program Files\Microsoft Office\root\Office16\POWERPNT.exe"
+}
+
+; Excel (NUM1)
+Excel() {
+  appSwitcher("XLMAIN", "C:\Program Files\Microsoft Office\root\Office16\EXCEL.exe")
+}
+ExcelLaunch() {
+  Run "C:\Program Files\Microsoft Office\root\Office16\EXCEL.exe"
+}
+
 ; Adobe apps
 ; Premiere (NUM9)
 Premiere() {

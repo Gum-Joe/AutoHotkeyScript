@@ -14,6 +14,10 @@ keyboards:
       NUM0$NUM_-$: VSCodeLaunch 
       NUM3: Word
       NUM0NUM3: WordLaunch
+      NUM2: Powerpoint
+      NUM0NUM2: PowerpointLaunch
+      NUM1: Excel
+      NUM0NUM1: ExcelLaunch
       NUM5: Terminal
       NUM0NUM5: TerminalLaunch
       NUM9: Premiere
@@ -30,6 +34,7 @@ keyboards:
       M: GoToMasterEffects
       W: AutoResize
       E: GraphicsCenterAlign
+      R: EffectCameraBlur
       O: OpenCurrentProjectFolderEditing
       ^O: OpenCurrentProjectFolderProgramming
       +O: OpenCurrentProjectEditingApp

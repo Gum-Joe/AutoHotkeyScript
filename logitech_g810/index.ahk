@@ -131,6 +131,8 @@ TriggerF24CA() {
 TriggerD() {
   if (WinActive(APP_ID_FIREFOX)) {
     OpenLastDownloadFirefox()
+  } else if WinActive(APP_ID_PREMIERE) {
+    SetSpeedDuration1Sec()
   }
 }
 

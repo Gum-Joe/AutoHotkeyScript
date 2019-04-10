@@ -20,3 +20,10 @@ EffectHorizontalFlip() {
 EffectCrop() {
   preset("Crop")
 }
+
+EffectCameraBlur() {
+  preset("Camera Blur")
+}
+EffectWarpStable() {
+  preset("Warp Stab")
+}
