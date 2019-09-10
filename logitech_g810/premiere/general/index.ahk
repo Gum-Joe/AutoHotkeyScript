@@ -3,3 +3,4 @@
 #Include preset.ahk
 #Include presets.ahk
 #Include terminate.ahk
+#Include capture_and_save.ahk

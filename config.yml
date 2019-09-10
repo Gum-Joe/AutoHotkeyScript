@@ -20,8 +20,10 @@ keyboards:
       NUM0NUM1: ExcelLaunch
       NUM5: Terminal
       NUM0NUM5: TerminalLaunch
-      NUM9: Premiere
-      NUM0NUM9: PremiereLaunch
+      NUM9: Discord
+      NUM0NUM9: DiscordLaunch
+      NUM8: Premiere
+      NUM0NUM8: PremiereLaunch
   logitech_g810:
     path: /dev/input/by-id/usb-Logitech_Gaming_Keyboard_G810_166A37573236-event-kbd
     dir: ./logitech_g810
@@ -49,6 +51,7 @@ keyboards:
       I: InsertAndAutoResize
       C: OpenInAudition
       N: EffectCrop
+      S: CaptureAndSave
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman

@@ -1,5 +1,6 @@
 ; Application switcher for numpad
 ; The numpad is positioned to left of main keyboard for easy use
+Global DEFAULT_TERMINAL := "D:\Users\Kishan\Documents\Projects\AutoHotKeyScripts\shortcuts\winterminal.lnk"
 
 ; Function to help switching apps
 ; From https://www.youtube.com/watch?v=OqyQABySV8k
@@ -55,20 +56,40 @@ VSCodeLaunch() {
   Run "code"
 }
 
+; DISCORD (NUM9)
+Discord() {
+  if (not WinExist("ahk_exe Discord.exe")) {
+    Run "D:\Users\Kishan\AppData\Local\Discord\Update.exe"
+  }
+  ; Create a group with all of them
+  GroupAdd "theWindowsOfDiscord", "ahk_exe Discord.exe"
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe Discord.exe") {
+    GroupActivate "theWindowsOfDiscord", "r"
+  } else {
+    ; Else activate the last code
+    WinActivate "ahk_exe Discord.exe"
+  }
+}
+DiscordLaunch() {
+  Run "D:\Users\Kishan\AppData\Local\Discord\Update.exe"
+}
+
 ; Terminal (NUM5)
 ; Grouped to include git-bash, cmder, hyper, powershell, cmd
-DEFAULT_TERMINAL := "C:\tools\Cmder\Cmder.exe" ; Cmder
+; DEFAULT_TERMINAL := "C:\tools\Cmder\Cmder.exe" ; Cmder
 Terminal() {
-  if (not WinExist("ahk_group theWindowsOfTerminals")) {
+  if (not WinExist("ahk_exe WindowsTerminal.exe")) {
     Run DEFAULT_TERMINAL
   }
 
   ; Create a group with all of them
   GROUP_NAME := "theWindowsOfTerminals"
-  GroupAdd GROUP_NAME, "ahk_class ConsoleWindowClass" ; CMD, PowerShell
-  GroupAdd GROUP_NAME, "ahk_class mintty" ; Git Bash
-  GroupAdd GROUP_NAME, "ahk_class VirtualConsoleClass" ; Cmder
-  GroupAdd GROUP_NAME, "ahk_exe Hyper.exe"
+  GroupAdd GROUP_NAME, "ahk_exe WindowsTerminal.exe"
+  ;GroupAdd GROUP_NAME, "ahk_class ConsoleWindowClass" ; CMD, PowerShell
+  ;GroupAdd GROUP_NAME, "ahk_class mintty" ; Git Bash
+  ;GroupAdd GROUP_NAME, "ahk_class VirtualConsoleClass" ; Cmder
+  ;GroupAdd GROUP_NAME, "ahk_exe Hyper.exe"
 
   ; If currently on one windows, go to the next
   if WinActive("ahk_group theWindowsOfTerminals") {
@@ -108,10 +129,20 @@ ExcelLaunch() {
 }
 
 ; Adobe apps
-; Premiere (NUM9)
+; Premiere (NUM8)
 Premiere() {
-  appSwitcher("Premiere Pro", "C:\Program Files\Adobe\Adobe Premiere Pro CC 2019\Adobe Premiere Pro.exe")
+  if (not WinExist("ahk_class Premiere Pro")) {
+    PremiereLauncher()
+  }
+  if not WinActive("ahk_class Premiere Pro") {
+    WinActivate("ahk_class Premiere Pro")
+  }
 }
 PremiereLauncher() {
   Run "C:\Program Files\Adobe\Adobe Premiere Pro CC 2019\Adobe Premiere Pro.exe"
+}
+
+; For testing purposes
+TestIfRunning() {
+  MsgBox "Running."
 }

@@ -2,5 +2,8 @@
   "code-runner.executorMapByFileExtension": {
     ".ahk2": "D:\\Users\\Kishan\\.2Keys\\software\\ahk\\x64w\\AutoHotkey.exe",
   },
-  "python.pythonPath": "D:\\Users\\Kishan\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
+  "python.pythonPath": "D:\\Users\\Kishan\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
+  "workbench.colorCustomizations": {
+    "tab.unfocusedActiveBorder": "#fff0"
+  }
 }
