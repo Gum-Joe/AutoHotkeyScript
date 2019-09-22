@@ -43,11 +43,24 @@ Global SCRIPT_ASSETS_ROOT := ABSOLUTE_SCRIPT_PATH "\assets"
 ; Repated code, should be refactored
 Global SCRIPT_ASSET_LIST := {
   icons: {
-    root: SCRIPT_ASSETS_ROOT "icons",
+    root: SCRIPT_ASSETS_ROOT "\icons",
     effects: {
-      root: SCRIPT_ASSETS_ROOT "icons" "effects",
-      transitionIcon: SCRIPT_ASSETS_ROOT "icons" "effects" "\TransitionIcon.png",
-      transitionIconAlt: SCRIPT_ASSETS_ROOT "icons" "effects" "\TransitionIconAlt.png" ; For if transition is selected
+      root: SCRIPT_ASSETS_ROOT "\icons" "\effects",
+      transitionIcon: SCRIPT_ASSETS_ROOT "\icons" "\effects" "\TransitionIcon.png",
+      transitionIconAlt: SCRIPT_ASSETS_ROOT "\icons" "\effects" "\TransitionIconAlt.png" ; For if transition is selected
+    },
+    bins: {
+      root: SCRIPT_ASSETS_ROOT "\icons" "\bins",
+      listViewIcon: SCRIPT_ASSETS_ROOT "\icons" "\bins" "\ListView.png",
+      thumbnailViewIcon: SCRIPT_ASSETS_ROOT "\icons" "\bins" "\ThumbView.png",
+    }
+  },
+  panels: {
+    root: SCRIPT_ASSETS_ROOT "\panels",
+    effectsControls: {
+      root: SCRIPT_ASSETS_ROOT "\panels" "\EffectsControls",
+      textPrefix: SCRIPT_ASSETS_ROOT "\panels" "\EffectsControls" "\EffectsControl",
+      textSuffix: ".png"
     }
   }
 }

@@ -4,3 +4,4 @@
 #Include presets.ahk
 #Include terminate.ahk
 #Include capture_and_save.ahk
+#Include bin_change_view.ahk

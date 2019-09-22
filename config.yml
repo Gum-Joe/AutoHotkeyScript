@@ -49,9 +49,20 @@ keyboards:
       T: TemplateOpenSans
       F: EffectHorizontalFlip
       I: InsertAndAutoResize
-      C: OpenInAudition
+      Y: OpenInAudition
       N: EffectCrop
       S: CaptureAndSave
+      V: BinChangeView
+      $#$: InstantVFXScale # Should be \
+      Z: InstantVFXAnchorPoint
+      X: InstantVFXAnchorPointVert
+      C: InstantVFXOpacity
+
+      # Instant VFX
+      $LEFT$: InstantVFXPosition
+      $RIGHT$: InstantVFXPosition
+      $UP$: InstantVFXPositionVert
+      $DOWN$: InstantVFXPositionVert
       
       F1: GotoHomework
       +F1G: GotoHomeworkGerman
