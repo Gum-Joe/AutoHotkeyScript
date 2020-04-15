@@ -30,7 +30,19 @@ ExplorerLaunch() {
 
 ; Firefox (NUM_+)
 Firefox() {
-  appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
+  ; appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
+  if (not WinExist("ahk_exe firefox.exe")) {
+    Run "C:\Program Files\Mozilla Firefox\firefox.exe"
+  }
+  ; Create a group with all of them
+  GroupAdd "theWindowsOfFirefox", "ahk_exe firefox.exe"
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe firefox.exe") {
+    GroupActivate "theWindowsOfFirefox", "r"
+  } else {
+    ; Else activate the last code
+    WinActivate "ahk_exe firefox.exe"
+  }
 }
 FirefoxLaunch() {
   Run "C:\Program Files\Mozilla Firefox\firefox.exe"

@@ -57,6 +57,7 @@ keyboards:
       Z: InstantVFXAnchorPoint
       X: InstantVFXAnchorPointVert
       C: InstantVFXOpacity
+      H: EssentialAudioPresetBlueYeti
 
       # Instant VFX
       $LEFT$: InstantVFXPosition

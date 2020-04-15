@@ -61,6 +61,12 @@ Global SCRIPT_ASSET_LIST := {
       root: SCRIPT_ASSETS_ROOT "\panels" "\EffectsControls",
       textPrefix: SCRIPT_ASSETS_ROOT "\panels" "\EffectsControls" "\EffectsControl",
       textSuffix: ".png"
+    },
+    essentialAudio: {
+      root: SCRIPT_ASSETS_ROOT "\panels" "\EssentialAudio",
+      preset: SCRIPT_ASSETS_ROOT "\panels" "\EssentialAudio" "\Preset.png",
+      maleBlueYeti: SCRIPT_ASSETS_ROOT "\panels" "\EssentialAudio" "\MaleVoiceBlueYeti.png",
+      dialogue: SCRIPT_ASSETS_ROOT "\panels" "\EssentialAudio" "\Dialogue.png"
     }
   }
 }

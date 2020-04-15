@@ -1,6 +1,7 @@
 #Include ..\common\index.ahk
 #Include remove_unused_merged_tracks.ahk
 #Include open_in_audition.ahk
+#Include essential.ahk
 
 EssentialAudioPresetBlueYeti_cb() {
   Click 1764, 290 ; Sekect Dialogue
@@ -12,13 +13,7 @@ EssentialAudioPresetBlueYeti_cb() {
   Return
 }
 
-EssentialAudioPresetBlueYeti() {
-  ; Base HotKey code
-  BasePremiereFunctions()
-  ; Verify Audio mode is selected
-  SetWorkspace("Audio")
-  Return
-}
+
 
 ;Ok:
 ;  Gui.Destroy()
