@@ -5,6 +5,13 @@ TransitionDipToBlack() {
   addTransition("Dip To Black")
 }
 
+AudioTransitionExponetialFade() {
+  addTransition("Exponential Fade")
+}
+AudioTransitionConstantPower() {
+  addTransition("Constant Power")
+}
+
 EffectUltraKey() {
   preset("Ultra Key")
 }

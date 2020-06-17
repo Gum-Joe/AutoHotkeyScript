@@ -40,13 +40,14 @@ const logger = createWriteStream(join(root, ".2Keys", `${ date.getFullYear() }.$
 
 // PID file
 console.log("Creating a PID file for this process...");
-writeFileSync(join(root, ".2Keys", "daemon.pid"), process.pid);
+writeFileSync(join(root, ".2Keys", "daemon.pid"), process.pid.toString());
 
 console.log("Starting 2Keys server for four...");
 const server = spawn("2Keys", [
 	"serve",
+	"--debug",
 	"--pid-file",
-	join(root, ".2Keys", "server.pid")
+	join(root, ".2Keys", "server.pid"),
 ], {
 	shell: true,
 	env: {
@@ -64,11 +65,16 @@ server.stderr.on("data", (data) => {
 
 server.on("close", (code) => {
 	console.log(`child process exited with code ${ code }`);
+	logger.write(`child process exited with code ${code}`);
+	logger.close();
 	process.exit(code);
 });
 
 server.on("error", (err) => {
 	console.error("Failed to start subprocess.");
 	console.error(err);
+	logger.write("Failed to start subprocess.");
+	logger.write(err);
+	logger.close();
 	process.exit(1);
 });

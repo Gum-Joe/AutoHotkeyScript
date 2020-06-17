@@ -48,6 +48,22 @@ FirefoxLaunch() {
   Run "C:\Program Files\Mozilla Firefox\firefox.exe"
 }
 
+; Slack
+Slack() {
+  if (not WinExist("ahk_exe slack.exe")) {
+    Run "D:\Users\Kishan\AppData\Local\slack\slack.exe"
+  }
+  ; Create a group with all of them
+  GroupAdd "theWindowsOfSlack", "ahk_exe slack.exe"
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe slack.exe") {
+    GroupActivate "theWindowsOfSlack", "r"
+  } else {
+    ; Else activate the last code
+    WinActivate "ahk_exe slack.exe"
+  }
+}
+
 ; VSCODE (NUM_-)
 ; Custom as all electron apps have same ahk_class
 VSCode() {

@@ -24,6 +24,8 @@ keyboards:
       NUM0NUM9: DiscordLaunch
       NUM8: Premiere
       NUM0NUM8: PremiereLaunch
+      $BACKSPACE$: Slack
+      NUM0$BACKSPACE$: Slack
   logitech_g810:
     path: /dev/input/by-id/usb-Logitech_Gaming_Keyboard_G810_166A37573236-event-kbd
     dir: ./logitech_g810
@@ -53,11 +55,13 @@ keyboards:
       N: EffectCrop
       S: CaptureAndSave
       V: BinChangeView
-      $#$: InstantVFXScale # Should be \
+      $#$: InstantVFXScale # Should be \ (backslash)
       Z: InstantVFXAnchorPoint
       X: InstantVFXAnchorPointVert
       C: InstantVFXOpacity
       H: EssentialAudioPresetBlueYeti
+      J: AudioTransitionExponetialFade
+      ",": AudioTransitionConstantPower
 
       # Instant VFX
       $LEFT$: InstantVFXPosition

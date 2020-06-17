@@ -9,7 +9,7 @@ InstantVFX(effectName, hotTextNumber := 1) {
 
 	; Select effect controls
 	Send SHORTCUT_EFFECTS_CONTROLS_ACTIVATE
-	Sleep 10 ; WAIT FOR IT TO ACT.
+	Sleep 50 ; WAIT FOR IT TO ACT.
 
 	controlEffectsCont := ControlGetClassNN(ControlGetFocus("A"))
 	; Get info about effects control panel
@@ -42,8 +42,7 @@ InstantVFX(effectName, hotTextNumber := 1) {
 		findVFX(effectName, hotTextNumber)
 		;untwirled = 1
 		Return "untwirled"
-	}
-	else if (TriangleColour = "0x1D1D1D" || TriangleColour = "0x232323") {
+	} else if (TriangleColour = "0x1D1D1D" || TriangleColour = "0x232323") {
 		; this is a normal panel color of 0x1d1d1d or %colorr%, which means NO CLIP has been selected ; assuming you didnt change your UI brightness. so we are going to select the top clip at playhead.
 		Send SHORTCUT_SELECTION_FOLLOWS_PLAYHEAD
 		sleep 10
