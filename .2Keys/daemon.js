@@ -43,7 +43,8 @@ console.log("Creating a PID file for this process...");
 writeFileSync(join(root, ".2Keys", "daemon.pid"), process.pid.toString());
 
 console.log("Starting 2Keys server for four...");
-const server = spawn("2Keys", [
+const server = spawn("node", [
+	"D:\\Users\\Kishan\\Documents\\Projects\\2Keys\\server\\bin\\2Keys",
 	"serve",
 	"--debug",
 	"--pid-file",

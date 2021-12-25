@@ -28,6 +28,21 @@ ExplorerLaunch() {
   Run "explorer.exe"
 }
 
+Teams() {
+  if (not WinExist("ahk_exe Teams.exe")) {
+    Run "D:\Users\Kishan\AppData\Local\Microsoft\Teams\Update.exe"
+  }
+  ; Create a group with all of them
+  GroupAdd "theWindowsOfTeams", "ahk_exe Teams.exe"
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe Teams.exe") {
+    GroupActivate "theWindowsOfTeams", "r"
+  } else {
+    ; Else activate the last code
+    WinActivate "ahk_exe Teams.exe"
+  }
+}
+
 ; Firefox (NUM_+)
 Firefox() {
   ; appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
@@ -46,6 +61,25 @@ Firefox() {
 }
 FirefoxLaunch() {
   Run "C:\Program Files\Mozilla Firefox\firefox.exe"
+}
+
+MSEdge() {
+  ; appSwitcher("MozillaWindowClass", "C:\Program Files\Mozilla Firefox\firefox.exe")
+  if (not WinExist("ahk_exe msedge.exe")) {
+    Run "C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
+  }
+  ; Create a group with all of them
+  GroupAdd "theWindowsOfFirefox", "ahk_exe msedge.exe"
+  ; If currently on one windows, go to the next
+  if WinActive("ahk_exe msedge.exe") {
+    GroupActivate "theWindowsOfFirefox", "r"
+  } else {
+    ; Else activate the last code
+    WinActivate "ahk_exe msedge.exe"
+  }
+}
+MSEdgeLaunch() {
+  Run "C:\Program Files (x86)\Microsoft\Edge Dev\Application\msedge.exe"
 }
 
 ; Slack

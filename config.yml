@@ -12,8 +12,9 @@ keyboards:
       NUM0$NUM_+$: FirefoxLaunch
       $NUM_-$: VSCode
       NUM0$NUM_-$: VSCodeLaunch 
-      NUM3: Word
-      NUM0NUM3: WordLaunch
+      #NUM3: Word
+      #NUM0NUM3: WordLaunch
+      NUM3: Teams
       NUM2: Powerpoint
       NUM0NUM2: PowerpointLaunch
       NUM1: Excel
@@ -26,6 +27,8 @@ keyboards:
       NUM0NUM8: PremiereLaunch
       $BACKSPACE$: Slack
       NUM0$BACKSPACE$: Slack
+      NUM7: Teams
+      $NUM_/$: TestIfRunning
   logitech_g810:
     path: /dev/input/by-id/usb-Logitech_Gaming_Keyboard_G810_166A37573236-event-kbd
     dir: ./logitech_g810
